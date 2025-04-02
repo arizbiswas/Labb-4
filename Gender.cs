@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labbb_4
+namespace Labbb4_01
 {
-    // Enum som visar kön
+    // Enum för kön
     public enum Gender
     {
-        Kvinna,
         Man,
+        Kvinna,
         IckeBinär,
         Annan
     }
 }
+

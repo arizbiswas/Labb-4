@@ -1,25 +1,29 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Labbb4_01;
 
-namespace Labbb_4
+namespace Labbb4_01
 {
     // Klass som beskriver en person
     public class Person
     {
-        public string Namn { get; set; }          // Personens namn
-        public Gender Kön { get; set; }           // Personens kön
-        public Hair Hår { get; set; }             // Personens hår
-        public DateTime Födelsedatum { get; set; } // Födelsedatum
-        public string Ögonfärg { get; set; }      // Ögonfärg
+        public string Förnamn { get; set; }
+        public string Efternamn { get; set; }
+        public Gender Kön { get; set; }
+        public Hair Hår { get; set; }
+        public DateTime Födelsedatum { get; set; }
+        public string Ögonfärg { get; set; }
 
-        // Konstruktor som skapar en person
-        public Person(string namn, Gender kön, Hair hår, DateTime födelsedatum, string ögonfärg)
+        // Konstruktor
+        public Person(string förnamn, string efternamn, Gender kön, Hair hår, DateTime födelsedatum, string ögonfärg)
         {
-            Namn = namn;
+            Förnamn = förnamn;
+            Efternamn = efternamn;
             Kön = kön;
             Hår = hår;
             Födelsedatum = födelsedatum;
@@ -29,7 +33,7 @@ namespace Labbb_4
         // Returnerar information om personen
         public override string ToString()
         {
-            return $"Namn: {Namn}\nKön: {Kön}\nHår: {Hår}\nFödelsedatum: {Födelsedatum.ToShortDateString()}\nÖgonfärg: {Ögonfärg}";
+            return $"Namn: {Förnamn} {Efternamn}\nKön: {Kön}\nHår: {Hår}\nFödelsedatum: {Födelsedatum:yyyy-MM-dd}\nÖgonfärg: {Ögonfärg}\n";
         }
     }
 }
